@@ -34,6 +34,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>12530860-D288-4741-BD27-A3868F7CE011</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9BB3B4A6-0ED8-459E-A5A3-3192FD0CC256</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>5E57D4EB-7865-4A0C-88D0-E7C9AF95044F</key>
 		<array>
 			<dict>
@@ -47,11 +60,76 @@
 				<false/>
 			</dict>
 		</array>
+		<key>C266CF83-8063-44D6-9EFF-0F9A3B80B5E2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EF55973D-6BA3-494E-98C3-066F54D87FC6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C34D696C-D7B2-4B75-A485-8A9DE5DF3B82</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>965F704E-37AD-4BA3-B7D0-133A1215F24C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C6C5C9BB-5C2B-4539-8988-FAAE15AF3EE0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>12530860-D288-4741-BD27-A3868F7CE011</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D02FE02B-3C5E-4748-8A15-1EB7B0E1538D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C34D696C-D7B2-4B75-A485-8A9DE5DF3B82</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>DE2C2E6F-40CF-4B21-9701-8EE394FB1F96</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>01ADB574-9A53-4553-A0E2-8E94FAA7857F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EF55973D-6BA3-494E-98C3-066F54D87FC6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8580855B-EFA2-476F-AC96-1441BF2A95EA</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -140,6 +218,27 @@ echo -n $query | tr '[:lower:]' '[:upper:]'</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>acceptsfiles</key>
+				<false/>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>acceptstext</key>
+				<true/>
+				<key>acceptsurls</key>
+				<false/>
+				<key>name</key>
+				<string>text - to lower case</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.universalaction</string>
+			<key>uid</key>
+			<string>DE2C2E6F-40CF-4B21-9701-8EE394FB1F96</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -185,6 +284,51 @@ echo -n $query | tr '[:upper:]' '[:lower:]'</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+
+
+echo -n $query | tr -s '_-' ' ' | tr -s ' ' '-'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>C34D696C-D7B2-4B75-A485-8A9DE5DF3B82</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>965F704E-37AD-4BA3-B7D0-133A1215F24C</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>acceptsfiles</key>
 				<false/>
 				<key>acceptsmulti</key>
@@ -194,14 +338,145 @@ echo -n $query | tr '[:upper:]' '[:lower:]'</string>
 				<key>acceptsurls</key>
 				<false/>
 				<key>name</key>
-				<string>text - to lower case</string>
+				<string>text - spaces to dashes</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.universalaction</string>
 			<key>uid</key>
-			<string>DE2C2E6F-40CF-4B21-9701-8EE394FB1F96</string>
+			<string>D02FE02B-3C5E-4748-8A15-1EB7B0E1538D</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>9BB3B4A6-0ED8-459E-A5A3-3192FD0CC256</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsfiles</key>
+				<false/>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>acceptstext</key>
+				<true/>
+				<key>acceptsurls</key>
+				<false/>
+				<key>name</key>
+				<string>text - spaces to underscores</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.universalaction</string>
+			<key>uid</key>
+			<string>C6C5C9BB-5C2B-4539-8988-FAAE15AF3EE0</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+
+echo -n $query | tr -s '_-' ' ' | tr -s ' ' '_'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>12530860-D288-4741-BD27-A3868F7CE011</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+
+
+echo -n $query | tr -s '_-' ' '</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>EF55973D-6BA3-494E-98C3-066F54D87FC6</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsfiles</key>
+				<false/>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>acceptstext</key>
+				<true/>
+				<key>acceptsurls</key>
+				<false/>
+				<key>name</key>
+				<string>text - revert to spaces</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.universalaction</string>
+			<key>uid</key>
+			<string>C266CF83-8063-44D6-9EFF-0F9A3B80B5E2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>8580855B-EFA2-476F-AC96-1441BF2A95EA</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -213,7 +488,7 @@ echo -n $query | tr '[:upper:]' '[:lower:]'</string>
 			<key>xpos</key>
 			<integer>235</integer>
 			<key>ypos</key>
-			<integer>210</integer>
+			<integer>180</integer>
 		</dict>
 		<key>09DDABF4-E3C0-4E46-8724-4F32E35B2123</key>
 		<dict>
@@ -221,6 +496,13 @@ echo -n $query | tr '[:upper:]' '[:lower:]'</string>
 			<integer>60</integer>
 			<key>ypos</key>
 			<integer>60</integer>
+		</dict>
+		<key>12530860-D288-4741-BD27-A3868F7CE011</key>
+		<dict>
+			<key>xpos</key>
+			<integer>235</integer>
+			<key>ypos</key>
+			<integer>420</integer>
 		</dict>
 		<key>5E57D4EB-7865-4A0C-88D0-E7C9AF95044F</key>
 		<dict>
@@ -234,7 +516,7 @@ echo -n $query | tr '[:upper:]' '[:lower:]'</string>
 			<key>xpos</key>
 			<integer>410</integer>
 			<key>ypos</key>
-			<integer>210</integer>
+			<integer>180</integer>
 		</dict>
 		<key>8144E102-548C-45AF-9834-C9FEFF4DEFA5</key>
 		<dict>
@@ -243,18 +525,74 @@ echo -n $query | tr '[:upper:]' '[:lower:]'</string>
 			<key>ypos</key>
 			<integer>60</integer>
 		</dict>
+		<key>8580855B-EFA2-476F-AC96-1441BF2A95EA</key>
+		<dict>
+			<key>xpos</key>
+			<integer>410</integer>
+			<key>ypos</key>
+			<integer>540</integer>
+		</dict>
+		<key>965F704E-37AD-4BA3-B7D0-133A1215F24C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>410</integer>
+			<key>ypos</key>
+			<integer>300</integer>
+		</dict>
+		<key>9BB3B4A6-0ED8-459E-A5A3-3192FD0CC256</key>
+		<dict>
+			<key>xpos</key>
+			<integer>410</integer>
+			<key>ypos</key>
+			<integer>420</integer>
+		</dict>
+		<key>C266CF83-8063-44D6-9EFF-0F9A3B80B5E2</key>
+		<dict>
+			<key>xpos</key>
+			<integer>60</integer>
+			<key>ypos</key>
+			<integer>540</integer>
+		</dict>
+		<key>C34D696C-D7B2-4B75-A485-8A9DE5DF3B82</key>
+		<dict>
+			<key>xpos</key>
+			<integer>235</integer>
+			<key>ypos</key>
+			<integer>300</integer>
+		</dict>
+		<key>C6C5C9BB-5C2B-4539-8988-FAAE15AF3EE0</key>
+		<dict>
+			<key>xpos</key>
+			<integer>60</integer>
+			<key>ypos</key>
+			<integer>420</integer>
+		</dict>
+		<key>D02FE02B-3C5E-4748-8A15-1EB7B0E1538D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>60</integer>
+			<key>ypos</key>
+			<integer>300</integer>
+		</dict>
 		<key>DE2C2E6F-40CF-4B21-9701-8EE394FB1F96</key>
 		<dict>
 			<key>xpos</key>
 			<integer>60</integer>
 			<key>ypos</key>
-			<integer>210</integer>
+			<integer>180</integer>
+		</dict>
+		<key>EF55973D-6BA3-494E-98C3-066F54D87FC6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>235</integer>
+			<key>ypos</key>
+			<integer>540</integer>
 		</dict>
 	</dict>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.0.0</string>
+	<string>1.1.0</string>
 	<key>webaddress</key>
 	<string>https://pawelgrzybek.com/</string>
 </dict>
